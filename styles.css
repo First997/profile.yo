@@ -1,0 +1,153 @@
+/* Reset básico */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #2d3a4c, #0f1d24);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-bottom: 1px solid #ff00ff;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    max-height: 300px; /* Ajuste a altura do banner aqui */
+    overflow: hidden;
+    margin-bottom: -20px; /* Overlap effect with avatar */
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 3px solid #ff00ff;
+}
+
+/* Avatar */
+.avatar-container {
+    position: relative;
+    margin-top: -60px; /* Ajustar conforme necessário para sobreposição com o banner */
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+    margin-top: -60px; /* Ajustar conforme necessário */
+    z-index: 1;
+}
+
+h1 {
+    margin: 10px 0;
+    color: #ff00ff;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+p {
+    color: #b0b0b0;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Seção de links */
+.links {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.links h2 {
+    margin-bottom: 15px;
+    color: #00ffff;
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.links a {
+    display: block;
+    color: #00ffff;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 1.5em;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.links a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff00ff;
+    transition: width 0.3s;
+}
+
+.links a:hover {
+    color: #ff00ff;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* Seção de músicas do Spotify */
+.spotify {
+    margin: 20px auto;
+    max-width: 1000px; /* Ajuste o tamanho máximo conforme necessário */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os iframes se movam para a linha seguinte em telas pequenas */
+    gap: 15px; /* Espaçamento entre os iframes */
+    justify-content: center; /* Centraliza os iframes no container */
+}
+
+.spotify h2 {
+    margin-bottom: 15px;
+    color: #00ffff;
+    font-size: 2em;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.spotify iframe {
+    border: 3px solid #ff00ff;
+    border-radius: 12px;
+    height: 152px; /* Altura fixa dos iframes */
+    width: 300px; /* Largura fixa dos iframes */
+    box-sizing: border-box;
+}
+
+/* Animação do gradiente de fundo */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
